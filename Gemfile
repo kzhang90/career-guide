@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave'
 # resizing images
 gem 'mini_magick'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 
 group :development, :test do
   gem 'factory_girl_rails'

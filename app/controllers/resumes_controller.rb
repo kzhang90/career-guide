@@ -1,5 +1,6 @@
 class ResumesController < ApplicationController
   # everything we need to do to find the right resume.
+  before_action :authenticate_user!
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
 
   def index
