@@ -1,0 +1,21 @@
+<%= form_for @resume do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :biography %>
+    <%= f.text_area :biography %>
+  </div>
+  <div class="field">
+    add an image....
+    <%= f.file_field :profile_pic %>
+  </div>
+  <div class="field">
+    <%= f.label :cv %>
+    <%= f.file_field :cv %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
