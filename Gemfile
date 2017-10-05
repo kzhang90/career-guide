@@ -38,7 +38,7 @@ gem 'devise'
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'guard-rspec'
+  gem 'guard-rspec', require: false
   # spring commands lets you integrate rspec with spring, which means tests will run much faster.
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
