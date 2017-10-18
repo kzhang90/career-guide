@@ -4,4 +4,5 @@ class Resume < ApplicationRecord
   mount_uploader :cv, CvUploader
   serialize :cv, JSON
   validates :name, presence: true
+  belongs_to :user
 end

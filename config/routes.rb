@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :resumes
+  resources :users do
+    resources :resumes
+    resources :pointers
+  end
   
   root 'welcome#index'
 end
