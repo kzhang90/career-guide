@@ -5,10 +5,14 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :users do
+  resources :users, shallow: true do
     resources :resumes
     resources :pointers
   end
-  
+
+  resources :field
+    resources :specialty
+  end
+
   root 'welcome#index'
 end
