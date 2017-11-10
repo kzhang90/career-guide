@@ -34,6 +34,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'bootstrap', '~> 4.0.0.beta2'
 
 group :development, :test do
   gem 'factory_girl_rails'

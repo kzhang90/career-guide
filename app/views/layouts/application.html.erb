@@ -9,14 +9,11 @@
   </head>
 
   <body>
-    <ul class="nav">
-      <!-- need condition paths. when user logs in, they can go to their resumes -->
-      
-      <li>
+    <ul class="nav">      
       <% if user_signed_in? %>
-        <%= link_to "Resumes", user_resumes_path(current_user) %>
+      <li><%= link_to "Resumes", user_resumes_path(current_user) %></li>
       <% end %>
-        </li>
+      <li><%= link_to "Fields", fields_path %></li>
       <li class="active"><a href="/">Home</a></li>
     </ul>
 

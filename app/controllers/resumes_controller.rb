@@ -1,5 +1,4 @@
 class ResumesController < ApplicationController
-  # since resumes are a child of user, need to find user first
   # before_action :authenticate_user!
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
 

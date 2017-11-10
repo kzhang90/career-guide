@@ -10,8 +10,8 @@ Rails.application.routes.draw do
     resources :pointers
   end
 
-  resources :field do
-    resources :specialty
+  resources :fields do
+    resources :specialties
   end
 
   root 'welcome#index'
