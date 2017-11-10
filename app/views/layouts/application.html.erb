@@ -11,7 +11,12 @@
   <body>
     <ul class="nav">
       <!-- need condition paths. when user logs in, they can go to their resumes -->
-      <li class="active"><a href="/resumes">Resumes</a></li>
+      
+      <li>
+      <% if user_signed_in? %>
+        <%= link_to "Resumes", user_resumes_path(current_user) %>
+      <% end %>
+        </li>
       <li class="active"><a href="/">Home</a></li>
     </ul>
 

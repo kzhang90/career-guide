@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :pointers
   end
 
-  resources :field
+  resources :field do
     resources :specialty
   end
 
