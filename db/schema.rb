@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171112213454) do
+ActiveRecord::Schema.define(version: 20171122231200) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -47,6 +47,16 @@ ActiveRecord::Schema.define(version: 20171112213454) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "inquiries", force: :cascade do |t|
+    t.text "subject"
+    t.integer "specialty_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["specialty_id"], name: "index_inquiries_on_specialty_id"
+    t.index ["user_id"], name: "index_inquiries_on_user_id"
   end
 
   create_table "pointers", force: :cascade do |t|

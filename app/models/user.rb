@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :inquiries
+  has_many :specialties, through: :inquiries
   has_many :pointers, :dependent => :destroy
   # most times, one user will have one resume, but this is a broad brush:
   has_many :resumes, :dependent => :destroy
