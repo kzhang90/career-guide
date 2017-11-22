@@ -1,1 +1,6 @@
 <h1>Make a new Field</h1>
+
+<%= form_for @field do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create" %>
+<% end %>

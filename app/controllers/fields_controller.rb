@@ -4,12 +4,18 @@ class FieldsController < ApplicationController
   end
 
   def new
+    @field = Field.new
   end
 
   def show
   end
 
   def create
+    if @field.save
+      redirect_to field_path
+    else
+      render 'new'
+    end
   end
 
   def edit
