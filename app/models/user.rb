@@ -11,6 +11,7 @@ class User < ApplicationRecord
   # user role setup
   
   enum role: [:seeker, :mentor]
+  
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
