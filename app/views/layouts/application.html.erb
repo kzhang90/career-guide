@@ -35,8 +35,14 @@
 </nav> -->
     <ul class="nav">      
       <% if user_signed_in? %>
-      <li><%= link_to "Resumes", user_resumes_path(current_user) %></li>
+        <% case current_user.role %>
+        <% when 'seeker' %>
+          <li><%= link_to "Resumes", user_resumes_path(current_user) %></li>
+        <% when 'mentor' %>
+          <h3>Welcome Mentor</h3>
+        <% end %>
       <% end %>
+
       <li><%= link_to "Fields", fields_path %></li>
       <li class="active"><a href="/">Home</a></li>
     </ul>
