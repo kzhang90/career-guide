@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'welcome#index'
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   
   ActiveAdmin.routes(self)
@@ -8,11 +11,11 @@ Rails.application.routes.draw do
   resources :users, shallow: true do
     resources :resumes
     resources :pointers
+    resources :inquiries
   end
 
-  resources :fields do
+  resources :fields, shallow: true do
     resources :specialties
   end
 
-  root 'welcome#index'
 end
