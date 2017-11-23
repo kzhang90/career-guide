@@ -6,6 +6,15 @@
     <li><%= link_to "add a resume", new_user_resume_path %> </li>
   </ul>
 </div>
+<!-- below just displaying the information of each resume -->
+<div id="user-resumes">
+  <% @resumes.each do |resume| %>
+    <%= resume.name %>
+    <%= resume.biography %>
+    <%= resume.profile_pic %>
+    <%= resume.cv %>
+  <% end %>
+</div>
 
 <p>show all resumes here and their field and specialty</p>
 
