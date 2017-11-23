@@ -3,14 +3,18 @@ class ResumesController < ApplicationController
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
 
   def index
-    # resume = User.find(params[:user_id]).resumes
+    # show all of particular user's resumes
+    @user = User.find(params[:id])
+    @resumes = @user.resumes
   end
 
   def show
   end
 
   def new
-    @resume = Resume.new
+    @user = User.find(params[:id])
+    @resume = @user.resumes.build
+    respond_with(@resume)
   end
 
   def edit
