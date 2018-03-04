@@ -4,7 +4,7 @@ class ResumesController < ApplicationController
 
   def index
     # show all of particular user's resumes
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     @resumes = @user.resumes
   end
 
@@ -12,9 +12,8 @@ class ResumesController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     @resume = @user.resumes.build
-    respond_with(@resume)
   end
 
   def edit
